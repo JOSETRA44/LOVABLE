@@ -2,36 +2,44 @@
 .pl 11i
 .po 1i
 .ll 6.5i
-.uh "Documentacion del Portafolio Minimalista"
+.uh "Documentacion del Portafolio Avanzado"
 .pp
-Este documento describe la arquitectura y el contenido del portafolio personal de Alex Dev.
-El sitio web esta diseñado para ser estatico, escalable y facil de desplegar en GitHub Pages.
+Este documento describe la arquitectura extendida del portafolio personal de Alex Dev.
+El proyecto ha evolucionado para incluir caracteristicas de UI modernas, animaciones y una estructura de datos mas rica, manteniendo su naturaleza estatica y escalable.
 
-.sh 1 "Arquitectura"
+.sh 1 "Arquitectura y Tecnologias"
 .pp
-El proyecto sigue una estructura simple de archivos estaticos, separando contenido, presentacion y logica.
-.ip "index.html"
-Define la estructura semantica de la pagina. Actua como un contenedor para el contenido inyectado dinamicamente.
-.ip "css/style.css"
-Contiene los estilos visuales. Utiliza variables CSS (Custom Properties) para definir colores y tipografias, facilitando la personalizacion y el mantenimiento (escalabilidad). El diseño es minimalista.
-.ip "js/data.js"
-Almacena todos los datos del portafolio (perfil, proyectos, habilidades) en un objeto JavaScript. Esto permite actualizar el contenido sin modificar el HTML.
-.ip "js/script.js"
-Contiene la logica para leer los datos de \fBdata.js\fP e inyectarlos en el DOM.
+El proyecto se adhiere a principios de arquitectura limpia para frontend:
+.ip "HTML5 Semantico"
+Estructura clara con secciones definidas para Hero, Servicios, Habilidades, Proyectos, Experiencia y Testimonios.
+.ip "CSS3 Avanzado"
+Uso extensivo de Variables CSS (Custom Properties) para gestion de temas (Claro/Oscuro). Implementacion de Flexbox y Grid para layouts responsivos complejos. Animaciones basadas en CSS Transitions y Keyframes.
+.ip "JavaScript Modular"
+Separacion estricta entre datos (\fBjs/data.js\fP) y logica de presentacion (\fBjs/script.js\fP). Uso de Intersection Observer API para animaciones al hacer scroll.
+.ip "Feather Icons"
+Integracion de iconos SVG ligeros para mejorar la interfaz visual sin comprometer el rendimiento.
 
-.sh 1 "Datos Hipoteticos"
+.sh 1 "Modelo de Datos"
 .pp
-Los datos utilizados para este prototipo son los siguientes:
-.ip "Nombre"
-Alex Dev
-.ip "Rol"
-Desarrollador Full Stack & UI Designer
-.ip "Proyectos"
-TaskFlow (React), EcoMarket (Node.js), WeatherMind (Vue.js)
+El archivo \fBjs/data.js\fP ahora soporta nuevas estructuras:
+.ip "Services"
+Lista de servicios ofrecidos con iconos asociados.
+.ip "Experience"
+Array de objetos para generar una linea de tiempo vertical.
+.ip "Testimonials"
+Citas de clientes o colegas para prueba social.
+
+.sh 1 "Caracteristicas UI/UX"
+.pp
+.ip "Modo Oscuro"
+Alternancia automatica basada en preferencias del sistema y persistencia manual mediante LocalStorage.
+.ip "Micro-interacciones"
+Efectos hover en tarjetas y botones, transiciones suaves de color y animaciones de entrada (fade-in).
+.ip "Responsive"
+Navegacion adaptativa con menu tipo hamburguesa para dispositivos moviles.
 
 .sh 1 "Despliegue"
 .pp
-Para desplegar en GitHub Pages:
-1. Subir el codigo a un repositorio en GitHub.
-2. Ir a Settings > Pages.
-3. Seleccionar la rama principal y la carpeta root como fuente.
+El proceso de despliegue en GitHub Pages permanece sin cambios:
+1. Subir a rama main.
+2. Configurar Source como root en Settings > Pages.

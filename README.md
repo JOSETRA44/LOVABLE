@@ -1,35 +1,36 @@
-# Portafolio Minimalista
+# Portafolio Profesional Minimalista
 
-Un portafolio virtual estático, diseñado con una arquitectura escalable y listo para desplegarse en GitHub Pages.
+Un portafolio web estático de alto rendimiento, diseñado con una arquitectura escalable y una interfaz de usuario pulida ("Best UI").
 
-## Arquitectura
+## Características Principales
 
-El proyecto está construido utilizando tecnologías web estándar (HTML5, CSS3, JavaScript ES6) con un enfoque en la separación de responsabilidades:
+*   **Diseño Minimalista & Moderno**: Tipografía limpia, espaciado generoso y estética profesional.
+*   **Tema Claro/Oscuro**: Soporte nativo para modo oscuro con persistencia de preferencias.
+*   **Arquitectura Escalable**: Todo el contenido reside en `js/data.js`. No es necesario tocar el HTML para actualizar textos o proyectos.
+*   **Animaciones Suaves**: Efectos de entrada al hacer scroll y micro-interacciones.
+*   **Totalmente Responsivo**: Se adapta perfectamente a móviles, tablets y escritorio.
+*   **Iconografía Vectorial**: Uso de Feather Icons para una carga rápida y nitidez en cualquier pantalla.
 
--   **Datos (`js/data.js`)**: Contiene toda la información del portafolio (perfil, proyectos, habilidades) en un objeto estructurado. Esto hace que actualizar el contenido sea tan fácil como editar este archivo.
--   **Lógica (`js/script.js`)**: Se encarga de renderizar el contenido dinámicamente en el DOM.
--   **Estilos (`css/style.css`)**: Utiliza Variables CSS para facilitar la personalización de colores y fuentes. Diseño minimalista y responsive.
--   **Estructura (`index.html`)**: HTML semántico limpio.
+## Estructura del Proyecto
 
-## Cómo desplegar en GitHub Pages
-
-1.  Haz un **fork** de este repositorio o sube los archivos a tu propio repositorio en GitHub.
-2.  Ve a la pestaña **Settings** (Configuración) de tu repositorio.
-3.  En el menú lateral izquierdo, haz clic en **Pages**.
-4.  En la sección **Source**, selecciona `Deploy from a branch`.
-5.  En **Branch**, selecciona tu rama principal (usualmente `main` o `master`) y la carpeta `/` (root).
-6.  Haz clic en **Save**.
-
-GitHub generará un enlace a tu portafolio en unos minutos.
+*   **`js/data.js`**: El corazón del contenido. Edita este archivo para cambiar tu información, experiencia, proyectos, etc.
+*   **`js/script.js`**: Lógica de renderizado, manejo de temas y animaciones.
+*   **`css/style.css`**: Estilos avanzados utilizando variables CSS para fácil personalización.
+*   **`index.html`**: El esqueleto semántico de la aplicación.
 
 ## Personalización
 
-Para personalizar el portafolio con tus propios datos:
+### 1. Actualizar Datos
+Abre `js/data.js` y reemplaza la información de ejemplo con la tuya. El script se encargará de renderizar las nuevas secciones automáticamente.
 
-1.  Abre el archivo `js/data.js`.
-2.  Modifica los valores del objeto `portfolioData` (nombre, bio, enlaces, proyectos).
-3.  Guarda los cambios y haz push a tu repositorio.
+### 2. Cambiar Colores
+En `css/style.css`, busca el bloque `:root` y modifica las variables de color:
+```css
+:root {
+    --accent: #2563eb; /* Tu color principal */
+}
+```
 
-## Documentación Adicional
+## Despliegue
 
-Se incluye un archivo `documentation.me` con detalles técnicos en formato Groff.
+Este proyecto está listo para GitHub Pages. Simplemente sube el código a tu repositorio y activa GitHub Pages desde la configuración apuntando a la raíz del proyecto.

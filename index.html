@@ -3,45 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Minimalista | Alex Dev</title>
-    <meta name="description" content="Portafolio virtual minimalista de Alex Dev, Desarrollador Full Stack.">
+    <title>Alex Dev | Portfolio</title>
+    <meta name="description" content="Portafolio de Alex Dev, Desarrollador Full Stack & UI Architect.">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Feather Icons (Lightweight) -->
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
 
-    <header class="header">
-        <div class="container">
-            <h1 class="logo" id="profile-name">Cargando...</h1>
-            <p class="role" id="profile-role"></p>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Alex<span class="dot">.</span></a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#about">Sobre mí</a>
+                <a href="#services">Servicios</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#experience">Experiencia</a>
+                <a href="#contact">Contacto</a>
+            </div>
+
+            <div class="nav-controls">
+                <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">
+                    <i data-feather="moon" class="moon-icon"></i>
+                    <i data-feather="sun" class="sun-icon"></i>
+                </button>
+                <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Menú">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-content fade-in-up">
+                <p class="hero-greeting">Hola, soy</p>
+                <h1 class="hero-title" id="profile-name">Cargando...</h1>
+                <h2 class="hero-subtitle" id="profile-role"></h2>
+                <p class="hero-bio" id="profile-bio"></p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="#contact" class="btn btn-outline">Contáctame</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in-up delay-100">
+                <!-- Abstract geometric shape or illustration could go here -->
+                <div class="abstract-shape"></div>
+            </div>
         </div>
     </header>
 
     <main class="main-content">
 
-        <section class="section about" id="about">
+        <section class="section services" id="services">
             <div class="container">
-                <h2 class="section-title">Sobre mí</h2>
-                <p id="profile-bio"></p>
-                <div class="contact-info" id="profile-contact">
-                    <!-- Contact links will be injected here -->
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Lo que hago</h2>
+                    <p class="section-subtitle">Soluciones digitales a medida</p>
+                </div>
+                <div class="services-grid" id="services-grid">
+                    <!-- Services injected here -->
                 </div>
             </div>
         </section>
 
         <section class="section skills" id="skills">
             <div class="container">
-                <h2 class="section-title">Habilidades</h2>
-                <ul class="skills-list" id="skills-list">
-                    <!-- Skills will be injected here -->
+                 <div class="section-header fade-in">
+                    <h2 class="section-title">Tech Stack</h2>
+                </div>
+                <ul class="skills-list fade-in" id="skills-list">
+                    <!-- Skills injected here -->
                 </ul>
             </div>
         </section>
 
         <section class="section projects" id="projects">
             <div class="container">
-                <h2 class="section-title">Proyectos Seleccionados</h2>
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Proyectos Destacados</h2>
+                    <p class="section-subtitle">Una selección de mis trabajos recientes</p>
+                </div>
                 <div class="projects-grid" id="projects-grid">
-                    <!-- Projects will be injected here -->
+                    <!-- Projects injected here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section experience" id="experience">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Experiencia</h2>
+                </div>
+                <div class="timeline" id="experience-timeline">
+                    <!-- Experience injected here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Testimonios</h2>
+                </div>
+                <div class="testimonials-grid" id="testimonials-grid">
+                    <!-- Testimonials injected here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="container contact-container fade-in">
+                <div class="contact-text">
+                    <h2 class="section-title">Hablemos</h2>
+                    <p>¿Tienes un proyecto en mente? Estoy disponible para trabajos freelance y colaboraciones.</p>
+                    <div class="contact-links" id="contact-socials">
+                        <!-- Social links injected here -->
+                    </div>
+                    <a href="mailto:alex@example.com" class="btn btn-primary btn-large" id="contact-email">Enviar Correo</a>
                 </div>
             </div>
         </section>
@@ -50,7 +134,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; <span id="current-year"></span> <span id="footer-name"></span>. Todos los derechos reservados.</p>
+            <p>&copy; <span id="current-year"></span> <span id="footer-name"></span>. Designed & Built by Alex Dev.</p>
         </div>
     </footer>
 
